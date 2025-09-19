@@ -42,27 +42,3 @@ for student, records in students.items():
     print(f"\n {student}'s Performance:")
     for subject, (mark, g) in records.items():
         print(f"{subject}: {mark} → {g}")
-
-
-import pandas as pd
-
-subject_data = {}
-
-# Step 1: Group data by subject
-for student, records in students.items():
-    for subject, (mark, grade_letter) in records.items():
-        if subject not in subject_data:
-            subject_data[subject] = []
-        subject_data[subject].append({
-            "Student": student,
-            "Marks": mark,
-            "Grade": grade_letter
-        })
-
-# Step 2: Write to Excel with separate sheets
-with pd.ExcelWriter("report_card_by_subject.xlsx") as writer:
-    for subject, data in subject_data.items():
-        df = pd.DataFrame(data)
-        df.to_excel(writer, sheet_name=subject, index=False)
-
-print(" Report card saved to 'report_card_by_subject.xlsx' with separate sheets.")
