@@ -1,6 +1,6 @@
 # 🏫 Student Grade System with Report Card Export
 
-A Python program that collects student marks for multiple subjects, assigns grades, and exports the final report card to both `.txt` and `.xlsx` files — with each subject stored in a **separate Excel sheet**!
+A Python program that collects student marks for multiple subjects, assigns grades.
 
 ---
 
@@ -10,9 +10,6 @@ A Python program that collects student marks for multiple subjects, assigns grad
 - Assigns grades based on predefined mark ranges
 - Stores results in a nested dictionary
 - Displays a neat report card in the terminal
-- Exports:
-  - 📄 `report_card.txt`: human-readable format
-  - 📊 `report_card_by_subject.xlsx`: separate sheet for each subject
 
 ---
 
@@ -55,9 +52,6 @@ Maths: 88.0 → Grade A
 Science: 30.0 → Grade F
 Maths: 45.0 → Grade E
 
-Report card saved as report_card_by_subject.xlsx
-
-
 ---
 
 ## 📦 How to Run
@@ -66,7 +60,6 @@ Report card saved as report_card_by_subject.xlsx
 2. Install required libraries:
 
 ```bash
-pip install pandas openpyxl
 
 Save your Python file as grade_system.py and run:
 python grade_system.py
